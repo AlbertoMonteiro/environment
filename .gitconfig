@@ -1,0 +1,19 @@
+[user]
+    name = Alberto Monteiro
+    email = alberto.monteiro@live.com
+[core]
+    editor = code -n -w
+[alias]
+    fetchall = fetch --all --prune
+    lognice = log --pretty --oneline -10
+    st = status
+    pr = pull
+    co = checkout
+    up = pull --rebase --prune
+    recommit = commit -a --amend --no-edit    
+    ec = config --global -e
+    up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+    cob = checkout -b
+    cm = !git add -A && git commit -m
+[push]
+    default = matching
