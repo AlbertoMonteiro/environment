@@ -14,7 +14,7 @@ Install-Module oh-my-posh -Force -SkipPublisherCheck -AllowPrerelease
 Import-Module posh-git
 Import-Module oh-my-posh
 New-Item $ThemeSettings.MyThemesLocation -ItemType Directory
-Invoke-WebRequest https://gist.githubusercontent.com/AlbertoMonteiro/4183020aa6c5d7d0fd8c6af8d0952b9a/raw/e7b1c7eb104442400ecd59069fe03d4bc895a21a/alberto-theme.psm1 -OutFile "$($ThemeSettings.MyThemesLocation)\alberto-theme.psm1"
+Invoke-WebRequest https://raw.githubusercontent.com/AlbertoMonteiro/environment/main/alberto-theme.psm1 -OutFile "$($ThemeSettings.MyThemesLocation)\alberto-theme.psm1"
 
 Set-Prompt alberto-theme
 
