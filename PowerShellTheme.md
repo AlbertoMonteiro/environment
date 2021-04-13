@@ -11,18 +11,23 @@ Set-ExecutionPolicy Unrestricted
 Install-Module PSReadLine -Force -SkipPublisherCheck -AllowPrerelease
 Install-Module posh-git -Force -SkipPublisherCheck -AllowPrerelease
 Install-Module oh-my-posh -Force -SkipPublisherCheck -AllowPrerelease
+Install-Module -Name Terminal-Icons -Repository PSGallery
+
 Import-Module posh-git
 Import-Module oh-my-posh
-New-Item $ThemeSettings.MyThemesLocation -ItemType Directory
-Invoke-WebRequest https://raw.githubusercontent.com/AlbertoMonteiro/environment/main/alberto-theme.psm1 -OutFile "$($ThemeSettings.MyThemesLocation)\alberto-theme.psm1"
+Import-Module -Name Terminal-Icons
+Set-PoshPrompt slim
 
-Set-Prompt alberto-theme
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadLineOption -PredictionSource History
 
 # this will override your current profile, so if you have something custom, do not execute it.
 $sb = New-Object -TypeName System.Text.StringBuilder
 $sb.AppendLine("Import-Module posh-git");
 $sb.AppendLine("Import-Module oh-my-posh");
-$sb.AppendLine("Set-Theme alberto-theme");
+$sb.AppendLine("Import-Module -Name Terminal-Icons");
+$sb.AppendLine("Set-PoshPrompt slim");
+$sb.AppendLine("");
 $sb.AppendLine("Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete");
 $sb.AppendLine("Set-PSReadLineOption -PredictionSource History");
 
