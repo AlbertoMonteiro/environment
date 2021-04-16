@@ -6,8 +6,7 @@
     whitespace = black-at-eol,black-at-eof,tab-in-indent
 [alias]
     fetchall = fetch --all --prune
-    lognice = log --pretty --oneline -10
-    lognoice = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -10
+    lognice = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -10
     st = status
     pr = pull
     co = checkout
