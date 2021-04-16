@@ -3,9 +3,11 @@
     email = alberto.monteiro@live.com
 [core]
     editor = code -n -w
+    whitespace = black-at-eol,black-at-eof,tab-in-indent
 [alias]
     fetchall = fetch --all --prune
-    lognice = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -10
+    lognice = log --pretty --oneline -10
+    lognoice = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -10
     st = status
     pr = pull
     co = checkout
@@ -13,13 +15,16 @@
     recommit = commit -a --amend --no-edit    
     ec = config --global -e
     up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-    wip = !git add -u && git commit -m "WIP"
-    undo = reset HEAD~1 --mixed
     cob = checkout -b
     cm = !git add -A && git commit -m
 [push]
     default = matching
+[mergetool]
+    prompt = true
+    conflictstyle = diff3
 [fetch]
-	prune = true
+    prune = true
 [pull]
-	rebase = true
+    rebase = true
+[rerere]
+    enabled = true
