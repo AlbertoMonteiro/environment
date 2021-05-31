@@ -35,3 +35,9 @@ $sb.ToString() | Out-File -FilePath $profile
 ```
 
 Then restart your powershell terminal
+
+## Third step
+
+Enable dotnet-suggestion
+
+Follow the tutorial: https://github.com/dotnet/command-line-api/blob/main/docs/dotnet-suggest.md
