@@ -20,6 +20,8 @@ Set-PoshPrompt slim
 
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -EditMode Windows
 
 # this will override your current profile, so if you have something custom, do not execute it.
 $sb = New-Object -TypeName System.Text.StringBuilder
