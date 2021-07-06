@@ -30,6 +30,8 @@ $sb.AppendLine("Set-PoshPrompt slim");
 $sb.AppendLine("");
 $sb.AppendLine("Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete");
 $sb.AppendLine("Set-PSReadLineOption -PredictionSource History");
+$sb.AppendLine("Set-PSReadLineOption -PredictionViewStyle ListView");
+$sb.AppendLine("Set-PSReadLineOption -EditMode Windows");
 
 $sb.ToString() | Out-File -FilePath $profile
 ```
