@@ -6,6 +6,16 @@ Download and install Hack NF font from [nerd-fonts](https://github.com/ryanoasis
 
 ## Second step
 
+This environment requires pre-release modules and to allow the instalation of pre-release modules in Powershell, you need to run the follow command:
+
+```powershell
+Install-Module PowerShellGet -Force
+```
+
+After, you need to close the terminal and open again as Administrator.
+
+## Third step
+
 ```powershell
 Set-ExecutionPolicy Unrestricted
 Install-Module PSReadLine -Force -SkipPublisherCheck -AllowPrerelease
@@ -40,7 +50,7 @@ $sb.ToString() | Out-File -FilePath $profile
 
 Then restart your powershell terminal
 
-## Third step
+## Fourth step
 
 Enable dotnet-suggestion
 
