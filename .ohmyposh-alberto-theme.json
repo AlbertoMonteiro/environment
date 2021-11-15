@@ -5,7 +5,7 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#ff479c",
+          "background": "#5c6ae9",
           "foreground": "#ffffff",
           "powerline_symbol": "",
           "properties": {
@@ -185,7 +185,7 @@
           "type": "dotnet"
         },
         {
-          "background": "#ff479c",
+          "background": "#5c6ae9",
           "foreground": "#ffffff",
           "invert_powerline": true,
           "leading_diamond": "",
