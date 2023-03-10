@@ -19,7 +19,6 @@ Install-Module posh-git -Force -SkipPublisherCheck -AllowPrerelease
 Install-Module -Name Terminal-Icons -Repository PSGallery
 
 Import-Module posh-git
-Import-Module oh-my-posh
 Import-Module -Name Terminal-Icons
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json" | Invoke-Expression
 
